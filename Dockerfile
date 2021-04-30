@@ -5,4 +5,4 @@ RUN go build hello.go
 
 FROM hello-world
 COPY --from=go_script /src/hello .
-CMD ["./hello"]
+ENTRYPOINT ["./hello"]
