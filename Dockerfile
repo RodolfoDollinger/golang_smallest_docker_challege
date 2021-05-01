@@ -3,6 +3,6 @@ WORKDIR /src/
 COPY /src/hello.go .
 RUN go build hello.go
 
-FROM hello-world
+FROM scratch
 COPY --from=go_script /src/hello .
 ENTRYPOINT ["./hello"]
